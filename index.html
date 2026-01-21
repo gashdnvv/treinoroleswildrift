@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wild Rift Pro Training - 25 Campeões</title>
+    <title>Wild Rift Pro Training - 27 Campeões</title>
     <link rel="preconnect" href="https://ddragon.leagueoflegends.com">
     <style>
         * { 
@@ -32,7 +32,6 @@
             line-height: 1.6;
         }
         
-        /* Animated Background */
         .bg-animation {
             position: fixed;
             width: 100%;
@@ -61,7 +60,6 @@
             z-index: 1;
         }
         
-        /* Header */
         .header {
             text-align: center;
             margin-bottom: 50px;
@@ -123,7 +121,6 @@
             letter-spacing: 2px;
         }
         
-        /* Role Selector */
         .role-selector {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -186,7 +183,6 @@
             z-index: 1;
         }
         
-        /* Role Mode */
         .role-mode { 
             display: none; 
             animation: fadeInUp 0.8s ease;
@@ -204,7 +200,6 @@
             }
         }
         
-        /* Champion Grid - Cards com Fotos */
         .champ-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -293,34 +288,44 @@
             z-index: 2;
         }
         
-        /* Champion Portraits - Riot Official CDN */
-        .katarina { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Katarina_0.jpg'); }
-        .irelia { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Irelia_0.jpg'); }
-        .zed { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg'); }
-        .orianna { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_0.jpg'); }
+        /* Champion Portraits - Riot Official CDN (ORDEM ALFABÉTICA) */
+        /* MID */
         .akali { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg'); }
+        .irelia { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Irelia_0.jpg'); }
+        .katarina { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Katarina_0.jpg'); }
+        .orianna { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Orianna_0.jpg'); }
+        .zed { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Zed_0.jpg'); }
+        
+        /* ADC */
         .caitlyn { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg'); }
-        .tristana { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Tristana_0.jpg'); }
-        .kalista { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kalista_0.jpg'); }
         .ezreal { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_0.jpg'); }
+        .kalista { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kalista_0.jpg'); }
         .missfortune { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/MissFortune_0.jpg'); }
+        .tristana { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Tristana_0.jpg'); }
+        
+        /* JUNGLE */
         .amumu { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Amumu_0.jpg'); }
         .jarvaniv { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/JarvanIV_0.jpg'); }
-        .wukong { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_0.jpg'); }
-        .lillia { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lillia_0.jpg'); }
         .kayn { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kayn_0.jpg'); }
-        .rakan { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rakan_0.jpg'); }
+        .lillia { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lillia_0.jpg'); }
+        .wukong { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/MonkeyKing_0.jpg'); }
+        
+        /* SUPPORT */
         .nautilus { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Nautilus_0.jpg'); }
         .pyke { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Pyke_0.jpg'); }
-        .thresh { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_0.jpg'); }
+        .rakan { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rakan_0.jpg'); }
         .rell { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Rell_0.jpg'); }
-        .renekton { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Renekton_0.jpg'); }
-        .camille { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Camille_0.jpg'); }
-        .poppy { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_0.jpg'); }
+        .thresh { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_0.jpg'); }
+        
+        /* TOP */
         .ambessa { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ambessa_0.jpg'); }
+        .camille { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Camille_0.jpg'); }
+        .fiora { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Fiora_0.jpg'); }
+        .poppy { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Poppy_0.jpg'); }
+        .renekton { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Renekton_0.jpg'); }
+        .riven { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Riven_0.jpg'); }
         .volibear { background-image: url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg'); }
         
-        /* Champion Mode */
         .champion-mode { 
             display: none; 
         }
@@ -329,7 +334,6 @@
             animation: fadeInUp 0.8s ease; 
         }
         
-        /* Mode Selector */
         .mode-selector {
             display: flex;
             justify-content: center;
@@ -364,7 +368,6 @@
             box-shadow: 0 0 40px rgba(0, 212, 255, 0.8);
         }
         
-        /* Training Mode */
         .training-mode { 
             display: none; 
         }
@@ -373,7 +376,6 @@
             animation: fadeInUp 0.8s ease; 
         }
         
-        /* Timer Section */
         .timer-section {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -428,7 +430,6 @@
             letter-spacing: 5px;
         }
         
-        /* Stats */
         .stat-item {
             display: flex;
             justify-content: space-between;
@@ -454,7 +455,6 @@
             background-clip: text;
         }
         
-        /* Buttons */
         .btn {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             border: none;
@@ -501,7 +501,6 @@
             transform: translateY(-4px) scale(1.1);
         }
         
-        /* Section */
         .section {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 212, 255, 0.1));
             backdrop-filter: blur(20px);
@@ -525,7 +524,6 @@
             letter-spacing: 4px;
         }
         
-        /* Quick Warning */
         .quick-warning {
             background: linear-gradient(135deg, rgba(255, 165, 0, 0.3), rgba(255, 149, 0, 0.25));
             border: 3px solid var(--warning);
@@ -540,7 +538,6 @@
             letter-spacing: 3px;
         }
         
-        /* Check Items */
         .check-item {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 212, 255, 0.12));
             padding: clamp(22px, 4.5vw, 36px);
@@ -646,7 +643,6 @@
             line-height: 1.9;
         }
         
-        /* Combo Visual */
         .combo-visual {
             margin: 25px 0 25px clamp(60px, 11vw, 80px);
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 212, 255, 0.2));
@@ -673,7 +669,6 @@
             color: #a0e7ff;
         }
         
-        /* Video Embed */
         .video-embed {
             margin: 25px 0 0 clamp(0px, 7vw, 80px);
             border-radius: 25px;
@@ -688,7 +683,6 @@
             border: none;
         }
         
-        /* Progress Bar */
         .progress-bar {
             background: rgba(0, 0, 0, 0.8);
             height: clamp(45px, 7vw, 60px);
@@ -721,7 +715,6 @@
             100% { background-position: 200% 50%; }
         }
         
-        /* Complete Message */
         .complete-msg {
             text-align: center;
             font-size: clamp(2.5em, 7vw, 4.5em);
@@ -747,7 +740,6 @@
             }
         }
         
-        /* Difficulty Tags */
         .difficulty {
             display: inline-block;
             padding: 10px 20px;
@@ -802,7 +794,6 @@
             font-weight: 900;
         }
         
-        /* Reset Button */
         .reset-container {
             text-align: center;
             margin-top: 60px;
@@ -821,7 +812,6 @@
             box-shadow: 0 25px 60px rgba(255, 0, 0, 0.9);
         }
         
-        /* Mobile Optimizations */
         @media (max-width: 768px) {
             .timer-section { 
                 grid-template-columns: 1fr; 
@@ -871,7 +861,7 @@
     <div class="container">
         <div class="header">
             <h1>⚡ WILD RIFT PRO TRAINING ⚡</h1>
-            <div class="subtitle">25 Campeões | 5 Roles | 200+ Combos Secretos 💎</div>
+            <div class="subtitle">27 Campeões | 5 Roles | 200+ Combos Secretos 💎</div>
         </div>
 
         <div class="role-selector">
@@ -892,51 +882,112 @@
             </button>
         </div>
 
-        <!-- MID LANE -->
+        <!-- ==================== MID LANE (ORDEM ALFABÉTICA) ==================== -->
         <div id="midRole" class="role-mode active">
             <div class="champ-grid">
-                <div class="champ-card active" onclick="switchChampion('mid', 'katarina')">
-                    <div class="champ-icon katarina"></div>
-                    <div class="champ-name">🗡️ Katarina</div>
+                <div class="champ-card active" onclick="switchChampion('mid', 'akali')">
+                    <div class="champ-icon akali"></div>
+                    <div class="champ-name">🥷 Akali</div>
                 </div>
                 <div class="champ-card" onclick="switchChampion('mid', 'irelia')">
                     <div class="champ-icon irelia"></div>
                     <div class="champ-name">⚔️ Irelia</div>
                 </div>
-                <div class="champ-card" onclick="switchChampion('mid', 'zed')">
-                    <div class="champ-icon zed"></div>
-                    <div class="champ-name">⚡ Zed</div>
+                <div class="champ-card" onclick="switchChampion('mid', 'katarina')">
+                    <div class="champ-icon katarina"></div>
+                    <div class="champ-name">🗡️ Katarina</div>
                 </div>
                 <div class="champ-card" onclick="switchChampion('mid', 'orianna')">
                     <div class="champ-icon orianna"></div>
                     <div class="champ-name">🔮 Orianna</div>
                 </div>
-                <div class="champ-card" onclick="switchChampion('mid', 'akali')">
-                    <div class="champ-icon akali"></div>
-                    <div class="champ-name">🥷 Akali</div>
+                <div class="champ-card" onclick="switchChampion('mid', 'zed')">
+                    <div class="champ-icon zed"></div>
+                    <div class="champ-name">⚡ Zed</div>
+                </div>
+            </div>
+
+            <!-- AKALI MODE -->
+            <div id="akaliMode" class="champion-mode active">
+                <div class="mode-selector">
+                    <button class="mode-btn active" onclick="switchMode('akali', 'full')">⚔️ COMPLETO (30 MIN)</button>
+                </div>
+
+                <div class="timer-section">
+                    <div class="timer">
+                        <h2>⏱️ CRONÔMETRO</h2>
+                        <div class="timer-display" id="timerAkali">30:00</div>
+                        <button class="btn" onclick="startTimer('akali')">▶️</button>
+                        <button class="btn" onclick="pauseTimer('akali')">⏸️</button>
+                        <button class="btn" onclick="resetTimer('akali')">🔄</button>
+                    </div>
+                    <div class="stats">
+                        <h2>📊 STATS</h2>
+                        <div class="stat-item"><span>Treinos:</span><span class="stat-value" id="akaliTotal">0</span></div>
+                        <div class="stat-item"><span>Hoje:</span><span class="stat-value" id="akaliToday">0%</span></div>
+                    </div>
+                </div>
+
+                <div id="akaliFullMode" class="training-mode active">
+                    <div class="section">
+                        <h2>🥷 COMBOS AKALI</h2>
+                        <div class="progress-bar"><div class="progress-fill" id="progressAkaliFull">0%</div></div>
+
+                        <div class="check-item akali-full" onclick="toggleItem('akali-full', this)">
+                            <div class="item-header">
+                                <div class="checkbox"></div>
+                                <div class="name">🥷 Perfect Assassination<span class="difficulty hard">DIFÍCIL</span></div>
+                            </div>
+                            <div class="combo-visual">
+                                <div class="combo-steps">E <span class="arrow">→</span> R1 <span class="arrow">→</span> Q <span class="arrow">→</span> P-AA <span class="arrow">→</span> W <span class="arrow">→</span> Q <span class="arrow">→</span> P-AA <span class="arrow">→</span> R2</div>
+                                <div class="combo-description">E → R1 → Q → Passive auto → W shroud → Q → Auto → R2 execute</div>
+                            </div>
+                            <div class="details"><strong>15 rep</strong> | Passive procs completos</div>
+                            <div class="video-embed"><iframe src="https://www.youtube.com/embed/EWEeUbdWf2w" allowfullscreen></iframe></div>
+                        </div>
+
+                        <div class="check-item akali-full" onclick="toggleItem('akali-full', this)">
+                            <div class="item-header">
+                                <div class="checkbox"></div>
+                                <div class="name">💫 Shuriken Flip Master<span class="difficulty hard">DIFÍCIL</span></div>
+                            </div>
+                            <div class="combo-visual">
+                                <div class="combo-steps">E1 <span class="arrow">→</span> W (during dash) <span class="arrow">→</span> E2 <span class="arrow">→</span> Q <span class="arrow">→</span> R</div>
+                            </div>
+                            <div class="details"><strong>15 rep</strong> | W mid-E dash</div>
+                        </div>
+
+                        <div class="check-item akali-full" onclick="toggleItem('akali-full', this)">
+                            <div class="item-header">
+                                <div class="checkbox"></div>
+                                <div class="name">⚡ Passive Circle Dance</div>
+                            </div>
+                            <div class="details"><strong>5 min</strong> | Sair/entrar círculo passive</div>
+                        </div>
+
+                        <div id="completeAkaliFull" style="display: none;"><div class="complete-msg">🏆 COMPLETO! 🥷</div></div>
+                    </div>
                 </div>
             </div>
 
             <!-- KATARINA MODE -->
-            <div id="katarinaMode" class="champion-mode active">
+            <div id="katarinaMode" class="champion-mode">
                 <div class="mode-selector">
                     <button class="mode-btn active" onclick="switchMode('katarina', 'full')">⚔️ COMPLETO (30 MIN)</button>
-                    <button class="mode-btn" onclick="switchMode('katarina', 'quick')">⚡ AQUECIMENTO (5 MIN)</button>
                 </div>
 
                 <div class="timer-section">
                     <div class="timer">
                         <h2>⏱️ CRONÔMETRO</h2>
                         <div class="timer-display" id="timerKatarina">30:00</div>
-                        <button class="btn" onclick="startTimer('katarina')">▶️ Iniciar</button>
-                        <button class="btn" onclick="pauseTimer('katarina')">⏸️ Pausar</button>
-                        <button class="btn" onclick="resetTimer('katarina')">🔄 Reset</button>
+                        <button class="btn" onclick="startTimer('katarina')">▶️</button>
+                        <button class="btn" onclick="pauseTimer('katarina')">⏸️</button>
+                        <button class="btn" onclick="resetTimer('katarina')">🔄</button>
                     </div>
                     <div class="stats">
-                        <h2>📊 ESTATÍSTICAS</h2>
-                        <div class="stat-item"><span>Treinos Completos:</span><span class="stat-value" id="katarinaTotal">0</span></div>
-                        <div class="stat-item"><span>Aquecimentos:</span><span class="stat-value" id="katarinaQuick">0</span></div>
-                        <div class="stat-item"><span>Progresso Hoje:</span><span class="stat-value" id="katarinaToday">0%</span></div>
+                        <h2>📊 STATS</h2>
+                        <div class="stat-item"><span>Treinos:</span><span class="stat-value" id="katarinaTotal">0</span></div>
+                        <div class="stat-item"><span>Hoje:</span><span class="stat-value" id="katarinaToday">0%</span></div>
                     </div>
                 </div>
 
@@ -952,22 +1003,9 @@
                             </div>
                             <div class="combo-visual">
                                 <div class="combo-steps">Q <span class="arrow">→</span> E <span class="arrow">→</span> AA <span class="arrow">→</span> W <span class="arrow">→</span> E <span class="arrow">→</span> R</div>
-                                <div class="combo-description">Q no alvo → E no dagger do Q → Auto-attack → W → E no dagger do W → Ulta pra finalizar</div>
                             </div>
-                            <div class="details"><strong>15 repetições</strong> | Timing perfeito entre cada dagger</div>
+                            <div class="details"><strong>15 rep</strong> | Timing perfeito</div>
                             <div class="video-embed"><iframe src="https://www.youtube.com/embed/gqC3uAGRmjA" allowfullscreen></iframe></div>
-                        </div>
-
-                        <div class="check-item katarina-full" onclick="toggleItem('katarina-full', this)">
-                            <div class="item-header">
-                                <div class="checkbox"></div>
-                                <div class="name">⚡ Flash Engage Surprise<span class="difficulty hard">DIFÍCIL</span></div>
-                            </div>
-                            <div class="combo-visual">
-                                <div class="combo-steps">Flash <span class="arrow">→</span> E <span class="arrow">→</span> W <span class="arrow">→</span> Q <span class="arrow">→</span> R</div>
-                                <div class="combo-description">Flash surpreende → E instantly → W → Q → R | Tudo em menos de 1 segundo</div>
-                            </div>
-                            <div class="details"><strong>12 repetições</strong> | Combinar tudo em &lt;1s após Flash</div>
                         </div>
 
                         <div class="check-item katarina-full" onclick="toggleItem('katarina-full', this)">
@@ -977,86 +1015,165 @@
                             </div>
                             <div class="combo-visual">
                                 <div class="combo-steps">W <span class="arrow">→</span> E <span class="arrow">→</span> Flash (mid-animation)</div>
-                                <div class="combo-description">W → E → Flash DURANTE a animação do E pra confundir inimigo</div>
                             </div>
-                            <div class="details"><strong>10 repetições</strong> | Flash no timing exato da animação E</div>
+                            <div class="details"><strong>10 rep</strong> | Flash timing</div>
                         </div>
 
-                        <div class="check-item katarina-full" onclick="toggleItem('katarina-full', this)">
-                            <div class="item-header">
-                                <div class="checkbox"></div>
-                                <div class="name">🪴 Plant Jump Tech<span class="difficulty secret">SECRETO</span></div>
-                            </div>
-                            <div class="combo-visual">
-                                <div class="combo-steps">E <span class="arrow">→</span> Plant <span class="arrow">→</span> E <span class="arrow">→</span> Combo</div>
-                                <div class="combo-description">Pode usar E em plantas da selva pra escapar ou engage surpresa</div>
-                            </div>
-                            <div class="details"><strong>5 minutos</strong> | Praticar posicionamentos com plants</div>
-                        </div>
-
-                        <div class="check-item katarina-full" onclick="toggleItem('katarina-full', this)">
-                            <div class="item-header">
-                                <div class="checkbox"></div>
-                                <div class="name">🧠 Mental Check<span class="difficulty medium">MÉDIO</span></div>
-                            </div>
-                            <div class="details">
-                                Repetir 10x em voz alta: "EU ESPERO O DAGGER CAIR" | "EU W ANTES DE R" | "EU USO PLANTS PRO ESCAPE"<br>
-                                Visualização: 2 minutos - imagina pentakill perfeito
-                            </div>
-                        </div>
-
-                        <div id="completeKatarinaFull" style="display: none;">
-                            <div class="complete-msg">🏆 TREINO COMPLETO! CHALLENGER INCOMING! 🗡️</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="katarinaQuickMode" class="training-mode">
-                    <div class="section">
-                        <h2>⚡ AQUECIMENTO KATARINA</h2>
-                        <div class="quick-warning">🔥 5 MINUTOS ANTES DE RANKEAR!</div>
-                        <div class="progress-bar"><div class="progress-fill" id="progressKatarinaQuick">0%</div></div>
-
-                        <div class="check-item katarina-quick" onclick="toggleItem('katarina-quick', this)">
-                            <div class="item-header">
-                                <div class="checkbox"></div>
-                                <div class="name">💀 Combo Básico<span class="difficulty fast">RÁPIDO</span></div>
-                            </div>
-                            <div class="combo-visual">
-                                <div class="combo-steps">Q <span class="arrow">→</span> E <span class="arrow">→</span> W <span class="arrow">→</span> R</div>
-                            </div>
-                            <div class="details"><strong>8 repetições</strong> | ~2 minutos | Foco: fluidez</div>
-                        </div>
-
-                        <div class="check-item katarina-quick" onclick="toggleItem('katarina-quick', this)">
-                            <div class="item-header">
-                                <div class="checkbox"></div>
-                                <div class="name">🔄 Reset Duplo<span class="difficulty fast">RÁPIDO</span></div>
-                            </div>
-                            <div class="combo-visual">
-                                <div class="combo-steps">E <span class="arrow">→</span> W <span class="arrow">→</span> Q <span class="arrow">→</span> E (reset)</div>
-                            </div>
-                            <div class="details"><strong>8 repetições</strong> | ~2 minutos</div>
-                        </div>
-
-                        <div class="check-item katarina-quick" onclick="toggleItem('katarina-quick', this)">
-                            <div class="item-header">
-                                <div class="checkbox"></div>
-                                <div class="name">⚡ Velocidade Máxima<span class="difficulty fast">RÁPIDO</span></div>
-                            </div>
-                            <div class="details"><strong>15 repetições</strong> | E-W-Q em menos de 0.7s</div>
-                        </div>
-
-                        <div id="completeKatarinaQuick" style="display: none;">
-                            <div class="complete-msg">⚡ AQUECIDO! BORA PRO RANKED! 🗡️</div>
-                        </div>
+                        <div id="completeKatarinaFull" style="display: none;"><div class="complete-msg">🏆 COMPLETO! 🗡️</div></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ADC, JUNGLE, SUPPORT, TOP seguem mesmo padrão -->
-        <!-- Por brevidade, mostro estrutura simplificada -->
+        <!-- ==================== TOP LANE (ORDEM ALFABÉTICA COM FIORA E RIVEN) ==================== -->
+        <div id="topRole" class="role-mode">
+            <div class="champ-grid">
+                <div class="champ-card active" onclick="switchChampion('top', 'ambessa')">
+                    <div class="champ-icon ambessa"></div>
+                    <div class="champ-name">⚡ Ambessa</div>
+                </div>
+                <div class="champ-card" onclick="switchChampion('top', 'camille')">
+                    <div class="champ-icon camille"></div>
+                    <div class="champ-name">⚔️ Camille</div>
+                </div>
+                <div class="champ-card" onclick="switchChampion('top', 'fiora')">
+                    <div class="champ-icon fiora"></div>
+                    <div class="champ-name">⚜️ Fiora</div>
+                </div>
+                <div class="champ-card" onclick="switchChampion('top', 'poppy')">
+                    <div class="champ-icon poppy"></div>
+                    <div class="champ-name">🔨 Poppy</div>
+                </div>
+                <div class="champ-card" onclick="switchChampion('top', 'renekton')">
+                    <div class="champ-icon renekton"></div>
+                    <div class="champ-name">🐊 Renekton</div>
+                </div>
+                <div class="champ-card" onclick="switchChampion('top', 'riven')">
+                    <div class="champ-icon riven"></div>
+                    <div class="champ-name">⚔️ Riven</div>
+                </div>
+                <div class="champ-card" onclick="switchChampion('top', 'volibear')">
+                    <div class="champ-icon volibear"></div>
+                    <div class="champ-name">🐻 Volibear</div>
+                </div>
+            </div>
+
+            <!-- FIORA MODE -->
+            <div id="fioraMode" class="champion-mode active">
+                <div class="timer-section">
+                    <div class="timer">
+                        <h2>⏱️ CRONÔMETRO</h2>
+                        <div class="timer-display" id="timerFiora">30:00</div>
+                        <button class="btn" onclick="startTimer('fiora')">▶️</button>
+                        <button class="btn" onclick="pauseTimer('fiora')">⏸️</button>
+                        <button class="btn" onclick="resetTimer('fiora')">🔄</button>
+                    </div>
+                    <div class="stats">
+                        <h2>📊 STATS</h2>
+                        <div class="stat-item"><span>Treinos:</span><span class="stat-value" id="fioraTotal">0</span></div>
+                        <div class="stat-item"><span>Hoje:</span><span class="stat-value" id="fioraToday">0%</span></div>
+                    </div>
+                </div>
+
+                <div class="training-mode active">
+                    <div class="section">
+                        <h2>⚜️ COMBOS FIORA</h2>
+                        <div class="progress-bar"><div class="progress-fill" id="progressFioraFull">0%</div></div>
+
+                        <div class="check-item fiora-full" onclick="toggleItem('fiora-full', this)">
+                            <div class="item-header">
+                                <div class="checkbox"></div>
+                                <div class="name">⚜️ Vital Master Combo<span class="difficulty hard">DIFÍCIL</span></div>
+                            </div>
+                            <div class="combo-visual">
+                                <div class="combo-steps">Q (vital) <span class="arrow">→</span> AA <span class="arrow">→</span> E <span class="arrow">→</span> Q (vital) <span class="arrow">→</span> AA</div>
+                                <div class="combo-description">Q procura vital → Auto → E empowered → Q novo vital → Auto</div>
+                            </div>
+                            <div class="details"><strong>15 rep</strong> | 4 vitals rápido</div>
+                        </div>
+
+                        <div class="check-item fiora-full" onclick="toggleItem('fiora-full', this)">
+                            <div class="item-header">
+                                <div class="checkbox"></div>
+                                <div class="name">🛡️ Riposte Master<span class="difficulty hard">DIFÍCIL</span></div>
+                            </div>
+                            <div class="combo-visual">
+                                <div class="combo-steps">W (block) <span class="arrow">→</span> Q <span class="arrow">→</span> AA <span class="arrow">→</span> E</div>
+                            </div>
+                            <div class="details"><strong>15 rep</strong> | W timing perfeito</div>
+                        </div>
+
+                        <div class="check-item fiora-full" onclick="toggleItem('fiora-full', this)">
+                            <div class="item-header">
+                                <div class="checkbox"></div>
+                                <div class="name">💎 Ult 4 Vitals<span class="difficulty secret">SECRETO</span></div>
+                            </div>
+                            <div class="details"><strong>5 min</strong> | R → 4 vitals em 3s</div>
+                        </div>
+
+                        <div id="completeFioraFull" style="display: none;"><div class="complete-msg">🏆 COMPLETO! ⚜️</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIVEN MODE -->
+            <div id="rivenMode" class="champion-mode">
+                <div class="timer-section">
+                    <div class="timer">
+                        <h2>⏱️ CRONÔMETRO</h2>
+                        <div class="timer-display" id="timerRiven">30:00</div>
+                        <button class="btn" onclick="startTimer('riven')">▶️</button>
+                        <button class="btn" onclick="pauseTimer('riven')">⏸️</button>
+                        <button class="btn" onclick="resetTimer('riven')">🔄</button>
+                    </div>
+                    <div class="stats">
+                        <h2>📊 STATS</h2>
+                        <div class="stat-item"><span>Treinos:</span><span class="stat-value" id="rivenTotal">0</span></div>
+                        <div class="stat-item"><span>Hoje:</span><span class="stat-value" id="rivenToday">0%</span></div>
+                    </div>
+                </div>
+
+                <div class="training-mode active">
+                    <div class="section">
+                        <h2>⚔️ COMBOS RIVEN</h2>
+                        <div class="progress-bar"><div class="progress-fill" id="progressRivenFull">0%</div></div>
+
+                        <div class="check-item riven-full" onclick="toggleItem('riven-full', this)">
+                            <div class="item-header">
+                                <div class="checkbox"></div>
+                                <div class="name">⚔️ Fast Q Combo<span class="difficulty hard">DIFÍCIL</span></div>
+                            </div>
+                            <div class="combo-visual">
+                                <div class="combo-steps">Q <span class="arrow">→</span> AA <span class="arrow">→</span> Q <span class="arrow">→</span> AA <span class="arrow">→</span> Q <span class="arrow">→</span> AA</div>
+                                <div class="combo-description">Q → Auto cancel → Q → Auto cancel → Q → Auto | Animation cancels</div>
+                            </div>
+                            <div class="details"><strong>20 rep</strong> | Fast Q timing</div>
+                        </div>
+
+                        <div class="check-item riven-full" onclick="toggleItem('riven-full', this)">
+                            <div class="item-header">
+                                <div class="checkbox"></div>
+                                <div class="name">💥 Burst Combo<span class="difficulty hard">DIFÍCIL</span></div>
+                            </div>
+                            <div class="combo-visual">
+                                <div class="combo-steps">E <span class="arrow">→</span> R <span class="arrow">→</span> Q <span class="arrow">→</span> AA <span class="arrow">→</span> W <span class="arrow">→</span> Q <span class="arrow">→</span> R2</div>
+                            </div>
+                            <div class="details"><strong>15 rep</strong> | One-shot combo</div>
+                        </div>
+
+                        <div class="check-item riven-full" onclick="toggleItem('riven-full', this)">
+                            <div class="item-header">
+                                <div class="checkbox"></div>
+                                <div class="name">⚡ Animation Cancels<span class="difficulty secret">SECRETO</span></div>
+                            </div>
+                            <div class="details"><strong>10 min</strong> | Master all cancels</div>
+                        </div>
+
+                        <div id="completeRivenFull" style="display: none;"><div class="complete-msg">🏆 COMPLETO! ⚔️</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="reset-container">
             <button class="btn reset-btn" onclick="resetAll()">
@@ -1068,11 +1185,11 @@
     <script>
         const roles = ['mid', 'adc', 'jungle', 'support', 'top'];
         const champions = {
-            mid: ['katarina', 'irelia', 'zed', 'orianna', 'akali'],
-            adc: ['caitlyn', 'tristana', 'kalista', 'ezreal', 'mf'],
-            jungle: ['amumu', 'jarvaniv', 'wukong', 'lillia', 'kayn'],
-            support: ['rakan', 'nautilus', 'pyke', 'thresh', 'rell'],
-            top: ['renekton', 'camille', 'poppy', 'ambessa', 'volibear']
+            mid: ['akali', 'irelia', 'katarina', 'orianna', 'zed'],
+            adc: ['caitlyn', 'ezreal', 'kalista', 'missfortune', 'tristana'],
+            jungle: ['amumu', 'jarvaniv', 'kayn', 'lillia', 'wukong'],
+            support: ['nautilus', 'pyke', 'rakan', 'rell', 'thresh'],
+            top: ['ambessa', 'camille', 'fiora', 'poppy', 'renekton', 'riven', 'volibear']
         };
 
         let currentRole = 'mid';
@@ -1225,7 +1342,7 @@
         }
 
         function resetAll() {
-            if (confirm('🔥 Resetar TODOS os treinos? As estatísticas serão mantidas.')) {
+            if (confirm('🔥 Resetar TODOS os treinos?')) {
                 document.querySelectorAll('.check-item').forEach(el => 
                     el.classList.remove('completed')
                 );
